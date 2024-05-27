@@ -2,8 +2,7 @@ import browserSandbox from '@exact-realty/lot/browser-worker';
 import { React, useEffect, useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
-
-const url = new URL('./sandbox.js', import.meta.url);
+import url from './sandbox.outer.js';
 
 function App() {
 	const [result, setResult] = useState(null);
