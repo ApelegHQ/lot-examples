@@ -1,0 +1,27 @@
+{
+	"name": "lot-examples",
+	"version": "0.0.0",
+	"description": "",
+	"workspace": true,
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.json",
+		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.json --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"author": "Exact Realty Limited",
+	"license": "ISC",
+	"devDependencies": {
+		"@exact-realty/lot": "^0.0.20",
+		"@typescript-eslint/eslint-plugin": "^7.10.0",
+		"@typescript-eslint/parser": "^7.10.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"prettier": "^3.2.5"
+	}
+}

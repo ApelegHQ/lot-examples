@@ -27,7 +27,10 @@ function App() {
 			)
 			.then((sandbox) => sandbox('vocative'))
 			.then((v) => setResult(`Hello, ${v}!`))
-			.catch((e) => setResult(`Error: ${e?.message || e}`));
+			.catch((e) => {
+				console.error('Sandbox init error', e);
+				setResult(new Error(`Error: ${e?.message || e}`, { cause: e }));
+			});
 
 		return () => abortController.abort();
 	}, [url]);
@@ -39,8 +42,12 @@ function App() {
 				<p>
 					{result === null ? (
 						<em>Pending...</em>
+					) : result instanceof Error ? (
+						<strong className="sandbox-error">
+							{result.message}
+						</strong>
 					) : (
-						<strong>{result}</strong>
+						<strong className="sandbox-success">{result}</strong>
 					)}
 				</p>
 			</header>
