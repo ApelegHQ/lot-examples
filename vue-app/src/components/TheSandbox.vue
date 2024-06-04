@@ -1,6 +1,5 @@
 <script setup>
-import browserSandbox from '@exact-realty/lot/browser-worker';
-import url from '../lib/sandbox.outer.js';
+import vocative from '../lib/sandbox.outer.js';
 </script>
 
 <template>
@@ -27,18 +26,7 @@ export default {
     }
   },
   mounted() {
-    fetch(url, {
-      headers: { accept: 'text/javascript' },
-      signal: this.abortController.signal,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Unexpected status code: ' + response.status);
-        }
-        return response.text();
-      })
-      .then((text) => browserSandbox(text, null, null, this.abortController.signal))
-      .then((sandbox) => sandbox('vocative'))
+    vocative(this.abortController.signal)
       .then((v) => { this.result = `Hello, ${v}!`; })
       .catch((e) => {
         console.error('Sandbox init error', e);

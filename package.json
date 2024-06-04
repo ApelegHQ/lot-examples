@@ -16,7 +16,7 @@
 	"author": "Exact Realty Limited",
 	"license": "ISC",
 	"devDependencies": {
-		"@exact-realty/lot": "^0.0.21",
+		"@exact-realty/lot": "^0.0.22",
 		"@typescript-eslint/eslint-plugin": "^7.10.0",
 		"@typescript-eslint/parser": "^7.10.0",
 		"eslint": "^8.56.0",
