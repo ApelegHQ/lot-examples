@@ -13,15 +13,15 @@
 		"type": "git",
 		"url": ""
 	},
-	"author": "Exact Realty Limited",
+	"author": "Apeleg Limited",
 	"license": "ISC",
 	"devDependencies": {
-		"@exact-realty/lot": "^0.0.23",
-		"@typescript-eslint/eslint-plugin": "^7.10.0",
-		"@typescript-eslint/parser": "^7.10.0",
-		"eslint": "^8.56.0",
+		"@apeleghq/lot": "^0.0.28",
+		"@typescript-eslint/eslint-plugin": "^8.5.0",
+		"@typescript-eslint/parser": "^8.5.0",
+		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-prettier": "^5.1.3",
-		"prettier": "^3.2.5"
+		"eslint-plugin-prettier": "^5.2.1",
+		"prettier": "^3.3.3"
 	}
 }

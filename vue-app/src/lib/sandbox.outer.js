@@ -1,4 +1,4 @@
-import browserSandbox from '@exact-realty/lot/browser-worker';
+import browserSandbox from '@apeleghq/lot/browser-worker';
 
 export default (signal) => {
 	const url = new URL('./sandbox.inner.cjs', import.meta.url);
